@@ -1,39 +1,11 @@
-import Dither from "../../effects/Dither/Dither"
 import Navbar from "../layout/Navbar"
 import "./Hero.css"
-import { useEffect, useState } from "react"
 
-export default function Hero() {
-  const [scrolled, setScrolled] = useState(false)
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80)
-    }
-
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
-
+export default function Hero({ scrolled = false }) {
   return (
     <section className="hero">
-
-      {/* Fondo */}
-      <div className="hero-bg">
-        <Dither
-          waveColor={[0.5, 0.5, 0.5]}
-          disableAnimation={false}
-          enableMouseInteraction
-          mouseRadius={0.1}
-          colorNum={4}
-          waveAmplitude={0.3}
-          waveFrequency={3}
-          waveSpeed={0.05}
-        />
-      </div>
-
       {/* Navbar */}
-      <Navbar />
+      <Navbar scrolled={scrolled} />
 
       {/* Título */}
       <div className="hero-content">

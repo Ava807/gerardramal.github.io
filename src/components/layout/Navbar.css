@@ -58,6 +58,43 @@
   transform: translateY(-1px);
 }
 
+/* iconos derecha */
+.nav-icons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.nav-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  width: 40px;
+  height: 40px;
+  
+  color: #fff;
+  text-decoration: none;
+  
+  transition: all 0.3s ease;
+  border-radius: 50%;
+  background: transparent;
+  
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-icon-link:hover {
+  color: #888;
+  transform: scale(1.1);
+}
+
+.nav-icon-link svg {
+  width: 28px;
+  height: 28px;
+}
+
 /* hamburguesa */
 .nav-hamburger {
   width: 28px;
@@ -76,6 +113,28 @@
   height: 2px;
   background: #fff;
   border-radius: 2px;
+}
+
+/* menú de navegación */
+.nav-menu {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #888;
 }
 
 /* cuando haces scroll */

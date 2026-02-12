@@ -235,10 +235,9 @@ function DitheredWaves({
   };
 
   useEffect(() => {
-    const canvas = gl.domElement;
-    canvas.addEventListener('pointermove', handlePointerMove);
+    document.addEventListener('pointermove', handlePointerMove);
     return () => {
-      canvas.removeEventListener('pointermove', handlePointerMove);
+      document.removeEventListener('pointermove', handlePointerMove);
     };
   }, [gl, enableMouseInteraction]);
 
